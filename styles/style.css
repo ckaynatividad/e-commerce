@@ -49,6 +49,38 @@ img {
     border-radius: 10%;
     background-color: white;
 }
+
+.prod-card:hover {
+    animation-name: FadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes FadeIn {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+  
+  @-moz-keyframes FadeIn {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+  
+  @-webkit-keyframes FadeIn {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
 #product-list {
     display: flex;
     flex-direction:inherit;

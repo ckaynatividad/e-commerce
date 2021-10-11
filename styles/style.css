@@ -1,0 +1,56 @@
+#product-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Signika', sans-serif;
+    letter-spacing: 3px;
+}
+
+h2 {
+    color: rgba(163, 118, 154, 0.39);
+    font-size: medium;
+}
+
+h1 {
+    color: rgba(95, 74, 95, 0.205);
+    letter-spacing: 5px;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+img {
+    width: 120px;
+    height: 230px;
+}
+
+.prod-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 20px solid rgba(247, 209, 205, 0.479);
+    align-items: center;
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 25%;
+}
+#product-list {
+    display: flex;
+    flex-direction:inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+.image:hover {
+    opacity: 0.5;
+}

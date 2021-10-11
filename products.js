@@ -1,17 +1,17 @@
 export const products = [
     {
-        id: 'hk', name: 'Hello Kitty', img: '', price: 11.11
+        id: 'p', name: 'Plum ', img: './assets/plum.png', price: 11.11
     },
     {
-        id: 'p', name: 'Pucca', img: '', price: 11.11
+        id: 'pf', name: 'Passionfruit', img: './assets/passionfruit.png', price: 11.11
     },
     {
-        id: 'ap', name: 'Apeach', img: '', price: 11.11
+        id: 'l', name: 'Lychee', img: './assets/lychee.png', price: 11.11
     },
     {
-        id: 'k', name: 'Keropi', img: '', price: 11.11
+        id: 't', name: 'Taro ', img: './assets/taro.png', price: 11.11
     },
     {
-        id: 'r', name: 'Ryan', img: '', price: 11.11
+        id: 'o', name: 'Ooolong', img: './assets/oolong.png', price: 11.11
     }
 ];

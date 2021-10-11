@@ -8,7 +8,7 @@ test('renderProd return HTML snippet', (expect) => {
     // Set up your arguments and expectations
     const expected = `<div class="prod-card">
     <h2>Hello Kitty</h2>
-    <img src="" alt="hello-kitty">
+    <img src="./assets/hk.png" alt="hello-kitty">
     </div>`;
     const helloKitty = products[0];
     //Act 

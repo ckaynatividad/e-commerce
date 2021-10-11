@@ -1,0 +1,16 @@
+export function renderProd(prod){
+    const prodCard = document.createElement('div');
+    prodCard.classList.add('prod-card');
+
+    const img = document.createElement('img');
+    img.src = prod.img;    
+    
+    const prodHeader = document.createElement('h2');
+    prodHeader.textContent = prod.name;
+
+    const prodPrice = document.createElement('h3');
+    prodPrice.textContent = `$ ${prod.price}`;
+
+    prodCard.append(prodHeader, img, prodPrice);
+    return prodCard;
+}

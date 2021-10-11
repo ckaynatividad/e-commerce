@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+import { products } from './products.js';
+import { renderProd } from './render.js';
 
-// initialize global state
-
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const productList = document.getElementById('product-list');
+  
+for (let prod of products){
+    const prodCard = renderProd(prod);
+    productList.append(prodCard);
+}

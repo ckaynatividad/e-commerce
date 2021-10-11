@@ -12,7 +12,7 @@ body {
 
 h1, h2 {
     font-family: 'Signika', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
 }
 
 h2 {
@@ -22,7 +22,7 @@ h2 {
 
 h1 {
     color: rgba(95, 74, 95, 0.205);
-    letter-spacing: 5px;
+    letter-spacing: 15px;
     font-style: italic;
     font-size: xx-large;
 }
@@ -41,11 +41,11 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 20px solid rgba(247, 209, 205, 0.473);
+    border: 12px solid rgba(247, 209, 205, 0.473);
     align-items: center;
     padding: 20px;
     width: 200px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 10%;
     background-color: white;
 }
@@ -62,37 +62,37 @@ h1:hover {
 }
 @keyframes FadeIn {
     0% {
-      opacity: 1;
+    opacity: 1;
     }
     100% {
-      opacity: 0.4;
+    opacity: 0.4;
     }
-  }
-  
-  @-moz-keyframes FadeIn {
+    }
+
+@-moz-keyframes FadeIn {
     0% {
-      opacity: 1;
+    opacity: 1;
     }
     100% {
-      opacity: 0.4;
+    opacity: 0.4;
     }
-  }
-  
-  @-webkit-keyframes FadeIn {
+}
+
+@-webkit-keyframes FadeIn {
     0% {
-      opacity: 1;
+opacity: 1;
     }
     100% {
-      opacity: 0.4;
+opacity: 0.4;
     }
-  }
+}
 #product-list {
     display: flex;
     flex-direction:inherit;
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .image:hover {

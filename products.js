@@ -1,17 +1,17 @@
 export const products = [
     {
-        id: 'p', name: 'Plum ', img: './assets/plum.png', price: 11.11
+        id: 'plum', name: 'Plum ', img: './assets/plum.png', price: 1.11
     },
     {
-        id: 'pf', name: 'Passionfruit', img: './assets/passionfruit.png', price: 11.11
+        id: 'passionfruit', name: 'Passionfruit', img: './assets/passionfruit.png', price: 1.11
     },
     {
-        id: 'l', name: 'Lychee', img: './assets/lychee.png', price: 11.11
+        id: 'lychee', name: 'Lychee', img: './assets/lychee.png', price: 1.11
     },
     {
-        id: 't', name: 'Taro ', img: './assets/taro.png', price: 11.11
+        id: 'taro', name: 'Taro ', img: './assets/taro.png', price: 1.11
     },
     {
-        id: 'o', name: 'Ooolong', img: './assets/oolong.png', price: 11.11
+        id: 'oolong', name: 'Oolong', img: './assets/oolong.png', price: 1.11
     }
 ];

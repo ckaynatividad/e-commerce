@@ -7,6 +7,7 @@
 
 body {
     text-align: center;
+    background-color: rgb(247, 243, 247);
 }
 
 h1, h2 {
@@ -26,6 +27,11 @@ h1 {
     font-size: xx-large;
 }
 
+h3 {
+    color: rgba(104, 74, 98, 0.363);
+    letter-spacing: 2px;
+}
+
 img {
     width: 120px;
     height: 230px;
@@ -35,12 +41,13 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 20px solid rgba(247, 209, 205, 0.479);
+    border: 20px solid rgba(247, 209, 205, 0.473);
     align-items: center;
     padding: 20px;
     width: 200px;
     margin: 10px;
-    border-radius: 25%;
+    border-radius: 10%;
+    background-color: white;
 }
 #product-list {
     display: flex;

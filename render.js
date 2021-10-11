@@ -8,6 +8,9 @@ export function renderProd(prod){
     const prodHeader = document.createElement('h2');
     prodHeader.textContent = prod.name;
 
-    prodCard.append(prodHeader, img);
+    const prodPrice = document.createElement('h3');
+    prodPrice.textContent = `$ ${prod.price}`;
+
+    prodCard.append(prodHeader, img, prodPrice);
     return prodCard;
 }

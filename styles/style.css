@@ -17,7 +17,7 @@ h1, h2 {
 
 h2 {
     color: rgba(163, 118, 154, 0.39);
-    font-size: medium;
+    font-size: large;
 }
 
 h1 {
@@ -51,6 +51,11 @@ img {
 }
 
 .prod-card:hover {
+    animation-name: FadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+h1:hover {
     animation-name: FadeIn;
     animation-duration: .5s;
     animation-fill-mode: forwards;

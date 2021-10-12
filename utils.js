@@ -7,3 +7,8 @@ export function findById(id, items){
     }
 
 }
+
+// export function calcOrderTotal(cart, products){
+//     let total = 0;
+//     for (it)
+// }

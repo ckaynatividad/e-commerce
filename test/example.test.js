@@ -4,6 +4,7 @@
 import { renderProd } from '../render.js';
 import { products } from '../data/products.js';
 import { findById } from '../utils.js';
+import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
@@ -30,4 +31,14 @@ test('findById should return the item matching the ID', (expect)=>{
 
     const actual = findById('plum', products);
     expect.deepEqual(actual, expected);
+});
+
+test('dm render should return itm qty, price, etc', (expect)=>{
+    const expected = `<td>Plum </td><td>1.11</td><td>6</td><td>6.66</td>`;
+    const plumCart = cart[0];
+
+    const actual = (plumCart, cart).outerHTML;
+
+    expect.equal(actual, expected);
+
 });

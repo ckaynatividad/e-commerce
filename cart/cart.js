@@ -15,7 +15,6 @@ for (let cartItem of cart){
     tdQty.textContent = cartItem.qty;
     const tdTotal = document.createElement('td');
     tdTotal.textContent = cartItem.qty * prodData.price;
-    
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);

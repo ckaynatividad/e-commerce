@@ -1,5 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
+
 import { renderProd } from '../render.js';
 import { products } from '../data/products.js';
 import { findById } from '../utils.js';
@@ -29,4 +30,4 @@ test('findById should return the item matching the ID', (expect)=>{
 
     const actual = findById('plum', products);
     expect.deepEqual(actual, expected);
-})
+});

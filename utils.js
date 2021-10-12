@@ -1,3 +1,5 @@
+import { products } from './data/products.js';
+
 export function findById(id, items){
 
     for (let item of items){
@@ -8,7 +10,15 @@ export function findById(id, items){
 
 }
 
-// export function calcOrderTotal(cart, products){
-//     let total = 0;
-//     for (it)
-// }
+export function orderTotalfx(cart, products) {
+    let orderTotal = 0;
+    for (let item of cart){
+        const prod = findById(item.id, products);
+        orderTotal = orderTotal + prod.price * item.qty;
+    }
+    return orderTotal;
+}
+
+export function toUSD(number){
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' })
+}

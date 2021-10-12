@@ -1,3 +1,5 @@
+import { toUSD } from './utils.js';
+
 export function renderLineItem(cartItem, prodData) {
     
     const tr = document.createElement('tr');
@@ -12,7 +14,8 @@ export function renderLineItem(cartItem, prodData) {
     tdQty.textContent = cartItem.qty;
     
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = (cartItem.qty * prodData.price).toFixed(2);
+    tdTotal.textContent = toUSD(cartItem.qty * prodData.price);
+    
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);
 

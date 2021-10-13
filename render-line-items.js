@@ -1,4 +1,4 @@
-import { findById } from './utils.js';
+
 
 export function renderLineItem(cartItem, prodData) {
     //const product = findById(cartItem.id, prodData);

@@ -3,7 +3,7 @@ import { orderTotalFx, findById, getCart, toUSD } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
 
 const cart = getCart();
-//console.log(cart);
+
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){
@@ -11,6 +11,7 @@ for (let cartItem of cart){
     const tr = renderLineItem(cartItem, prodData);
     tbody.appendChild(tr);
 }
+
 
 const table = document.getElementById('table');
 const msg = document.getElementById('msg');
@@ -30,6 +31,7 @@ tdOrderTotal.textContent = toUSD(orderTotal);
 
 const orderBtn = document.getElementById('order');
 orderBtn.addEventListener('click', ()=>{
+
     if (cart.length <= 0){
         orderBtn.disabled = true;
     }
@@ -42,3 +44,8 @@ clearCart.addEventListener('click', ()=>{
     localStorage.removeItem('CART');
     window.location.reload();
 });
+
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});
+

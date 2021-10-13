@@ -31,7 +31,10 @@ test('findById should return the item matching the ID', (expect)=>{
     expect.deepEqual(actual, expected);
 });
 
-test('getCart should return cart', (expect)=>{
+
+
+test('getCard should return cart', (expect)=>{
+
 
     const fakeCart = [
         { id: 'plum', qty: 2 },
@@ -40,6 +43,7 @@ test('getCart should return cart', (expect)=>{
     localStorage.setItem('CART', JSON.stringify(fakeCart));
 
     const cart = getCart();
+
 
     expect.deepEqual(cart, fakeCart);
 });
@@ -94,3 +98,45 @@ test('clearCart empties cart', (expect)=>{
     expect.deepEqual(actual, expected);
 });
 
+
+
+    expect.deepEqual(cart, fakeCart);
+});
+
+test('addItem should increment qty', (expect)=>{
+
+    const fakeCart = [
+        { id: 'plum', qty: 2 },
+        { id: 'oolong', qty: 4 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+
+    addItem('plum');
+    const cart = getCart();
+    const expected = [ 
+        { id: 'plum', qty: 3 },
+        { id: 'oolong', qty: 4 }
+    ];
+
+    expect.deepEqual(cart, expected);
+});
+
+test('getCart return empty array if null', (expect)=>{
+
+    localStorage.removeItem('CART');
+    const cart = getCart();
+
+    expect.deepEqual(cart, []);
+});
+
+test('addItem should add item', (expect) =>{
+
+    localStorage.removeItem('CART');
+
+    const expected = [{ id: 'plum', qty: 1 }];
+
+    addItem('plum');
+    const cart = getCart();
+
+    expect.deepEqual(cart, expected);
+});

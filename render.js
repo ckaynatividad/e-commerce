@@ -17,6 +17,7 @@ export function renderProd(prod){
     addBtn.classList.add('add-btn');
 
 
+
     prodCard.append(prodHeader, img, prodPrice, addBtn);
     return prodCard;
 }

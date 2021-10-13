@@ -16,3 +16,8 @@ for (let addBtn of addButtons){
         alert('Added item to your shopping cart.');
     });
 }
+
+// const shopCart = document.getElementById('cart-p');
+// shopCart.addEventListener('click' ()=>{
+
+// })

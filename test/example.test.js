@@ -81,3 +81,16 @@ test('addItem should add item', (expect) =>{
 
     expect.deepEqual(cart, expected);
 });
+
+test('clearCart empties cart', (expect)=>{
+    const fakeCart = [
+        { id: 'plum', qty: 2 },
+        { id: 'oolong', qty: 4 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    localStorage.removeItem('CART');
+    const expected = [];
+    const actual = getCart();
+    expect.deepEqual(actual, expected);
+});
+

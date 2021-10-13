@@ -35,3 +35,21 @@ tbody td {
     border: 1px solid rgba(104, 74, 98, 0.178);
 }
 
+.hide {
+    display: none;
+}
+
+#msg {
+    font-size: xx-large;
+    margin-top: 7rem;
+    color: rgba(95, 74, 95, 0.33);
+}
+
+button {
+    border-radius: 20px;
+    font-style: italic;
+    font-family: 'Signika', sans-serif;
+    font-size: smaller;
+    background-color: rgba(161, 138, 157, 0.39);
+    color:rgba(126, 116, 124, 0.974);
+}

@@ -4,7 +4,7 @@
 import { renderProd } from '../render.js';
 import { products } from '../data/products.js';
 import { findById } from '../utils.js';
-import { renderLineItem } from '../render-line-items.js';
+// import { renderLineItem } from '../render-line-items.js';
 
 const test = QUnit.test;
 
@@ -31,12 +31,12 @@ test('findById should return the item matching the ID', (expect)=>{
     expect.deepEqual(actual, expected);
 });
 
-test('dmo render should return itm qty, price, etc', (expect)=>{
-    const expected = `<tr><td>Plum </td><td>1.11</td><td>6</td><td>6.66</td></tr>`;
-    const plum = findById('plum', products);
+// test('dmo render should return itm qty, price, etc', (expect)=>{
+//     const expected = `<tr><td>Plum </td><td>1.11</td><td>6</td><td>6.66</td></tr>`;
+//     const plum = findById('plum', products);
 
-    const actual = renderLineItem(plum.id, plum).innerHTML;
+//     const actual = renderLineItem(plum.id, plum).innerHTML;
 
-    expect.equal(actual, expected);
+//     expect.equal(actual, expected);
 
-});
+// });

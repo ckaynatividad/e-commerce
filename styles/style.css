@@ -7,12 +7,22 @@
 
 body {
     text-align: center;
-    background-color: rgb(247, 243, 247);
+    background-color: rgb(250, 243, 241);
 }
 
 h1, h2 {
     font-family: 'Signika', sans-serif;
     letter-spacing: 5px;
+}
+
+#cart-p {
+    font-style: italic;
+    color: rgba(95, 74, 95, 0.712);
+}
+
+
+#cart-p:visited {
+    color: teal;
 }
 
 h2 {
@@ -21,7 +31,7 @@ h2 {
 }
 
 h1 {
-    color: rgba(95, 74, 95, 0.205);
+    color: rgba(95, 74, 95, 0.261);
     letter-spacing: 15px;
     font-style: italic;
     font-size: xx-large;
@@ -41,7 +51,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 12px solid rgba(247, 209, 205, 0.473);
+    border: 4px outset rgba(247, 209, 205, 0.473);
     align-items: center;
     padding: 20px;
     width: 200px;

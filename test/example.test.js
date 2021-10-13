@@ -98,11 +98,6 @@ test('clearCart empties cart', (expect)=>{
     expect.deepEqual(actual, expected);
 });
 
-
-
-    expect.deepEqual(cart, fakeCart);
-});
-
 test('addItem should increment qty', (expect)=>{
 
     const fakeCart = [

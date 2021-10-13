@@ -45,7 +45,4 @@ clearCart.addEventListener('click', ()=>{
     window.location.reload();
 });
 
-    localStorage.removeItem('CART');
-    window.location.replace('..');
-});
 

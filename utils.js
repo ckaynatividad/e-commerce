@@ -1,8 +1,8 @@
-import { products } from './data/products.js';
+
 
 export function findById(id, items){
 
-    for (let item of items){
+    for (let item of items) {
         if (item.id === id){
             return item;
         }
@@ -20,5 +20,5 @@ export function orderTotalfx(cart, products) {
 }
 
 export function toUSD(number){
-    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' })
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }

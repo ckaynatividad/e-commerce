@@ -31,7 +31,7 @@ test('findById should return the item matching the ID', (expect)=>{
     expect.deepEqual(actual, expected);
 });
 
-test('getCard should return cart', (expect)=>{
+test('getCart should return cart', (expect)=>{
 
     const fakeCart = [
         { id: 'plum', qty: 2 },

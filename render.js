@@ -12,9 +12,10 @@ export function renderProd(prod){
     prodPrice.textContent = `$ ${prod.price}`;
 
     const addBtn = document.createElement('button');
-    addBtn.textContent = 'Add';
+    addBtn.textContent = 'Add to Cart';
     addBtn.id = prod.id;
     addBtn.classList.add('add-btn');
+
 
     prodCard.append(prodHeader, img, prodPrice, addBtn);
     return prodCard;

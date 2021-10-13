@@ -4,7 +4,6 @@
 import { renderProd } from '../render.js';
 import { products } from '../data/products.js';
 import { findById } from '../utils.js';
-import { cart } from '../data/cart-data.js';
 import { renderLineItem } from '../render-line-items.js';
 
 const test = QUnit.test;

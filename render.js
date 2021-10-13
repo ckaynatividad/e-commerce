@@ -11,6 +11,11 @@ export function renderProd(prod){
     const prodPrice = document.createElement('h3');
     prodPrice.textContent = `$ ${prod.price}`;
 
-    prodCard.append(prodHeader, img, prodPrice);
+    const addBtn = document.createElement('button');
+    addBtn.textContent = 'Add';
+    addBtn.id = prod.id;
+    addBtn.classList.add('add-btn');
+
+    prodCard.append(prodHeader, img, prodPrice, addBtn);
     return prodCard;
 }

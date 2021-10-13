@@ -3,7 +3,7 @@
 
 import { renderProd } from '../render.js';
 import { products } from '../data/products.js';
-import { findById } from '../utils.js';
+import { findById, addItem, getCart } from '../utils.js';
 // import { renderLineItem } from '../render-line-items.js';
 
 const test = QUnit.test;
@@ -31,12 +31,53 @@ test('findById should return the item matching the ID', (expect)=>{
     expect.deepEqual(actual, expected);
 });
 
-// test('dmo render should return itm qty, price, etc', (expect)=>{
-//     const expected = `<tr><td>Plum </td><td>1.11</td><td>6</td><td>6.66</td></tr>`;
-//     const plum = findById('plum', products);
+test('getCard should return cart', (expect)=>{
 
-//     const actual = renderLineItem(plum.id, plum).innerHTML;
+    const fakeCart = [
+        { id: 'plum', qty: 2 },
+        { id: 'oolong', qty: 4 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
 
-//     expect.equal(actual, expected);
+    const cart = getCart();
 
-// });
+    expect.deepEqual(cart, fakeCart);
+});
+
+test('addItem should increment qty', (expect)=>{
+
+    const fakeCart = [
+        { id: 'plum', qty: 2 },
+        { id: 'oolong', qty: 4 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+
+    addItem('plum');
+    const cart = getCart();
+    const expected = [ 
+        { id: 'plum', qty: 3 },
+        { id: 'oolong', qty: 4 }
+    ];
+
+    expect.deepEqual(cart, expected);
+});
+
+test('getCart return empty array if null', (expect)=>{
+
+    localStorage.removeItem('CART');
+    const cart = getCart();
+
+    expect.deepEqual(cart, []);
+});
+
+test('addItem should add item', (expect) =>{
+
+    localStorage.removeItem('CART');
+
+    const expected = [{ id: 'plum', qty: 1 }];
+
+    addItem('plum');
+    const cart = getCart();
+
+    expect.deepEqual(cart, expected);
+});

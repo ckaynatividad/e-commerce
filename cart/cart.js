@@ -3,7 +3,7 @@ import { orderTotalFx, findById, getCart, toUSD } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
 
 const cart = getCart();
-console.log(cart);
+//console.log(cart);
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){

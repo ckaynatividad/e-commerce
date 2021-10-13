@@ -15,8 +15,8 @@
 <body>
     <header>Your Shopping Cart</header>
     <p>
-    <a href="../">back</a></p>
-<table>
+    
+<table id="table">
     <thead>
         <th>Product</th>
         <th>Price</th>
@@ -38,7 +38,14 @@
         <td id="total">To Be Calculated</td>
     </tfoot>
 </table>
+
+<p id="msg" class="hide">Your Shopping Cart Is Empty.</p>
 <button id="order">Place Order</button>
+<button id="clear">Clear Cart</button>
+<p><a href="../">back</a></p>
+
+<button id="order">Place Order</button>
+
 <script type="module" src="./cart.js"></script>
 
 </body>

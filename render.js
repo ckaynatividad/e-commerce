@@ -12,6 +12,14 @@ export function renderProd(prod){
     prodPrice.textContent = `$ ${prod.price}`;
 
     const addBtn = document.createElement('button');
+
+    addBtn.textContent = 'Add to Cart';
+    addBtn.id = prod.id;
+    addBtn.classList.add('add-btn');
+
+
+
+
     addBtn.textContent = 'Add';
     addBtn.id = prod.id;
     addBtn.classList.add('add-btn');

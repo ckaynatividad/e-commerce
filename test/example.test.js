@@ -10,7 +10,7 @@ const test = QUnit.test;
 
 test('renderProd return HTML snippet', (expect) => {
 
-    const expected = `<div class="prod-card"><h2>Plum </h2><img src="./assets/plum.png"><h3>$ 1.11</h3></div>`;
+    const expected = `<div class="prod-card"><h2>Plum </h2><img src="./assets/plum.png"><h3>$ 1.11</h3><button id=\"plum\" class=\"add-btn\">Add to Cart</button></div>`;
     const plum = products[0];
 
     const actual = renderProd(plum).outerHTML;

@@ -35,6 +35,7 @@ orderBtn.addEventListener('click', ()=>{
     if (cart.length <= 0){
         orderBtn.disabled = true;
     }
+    alert('Your order has been placed.');
     localStorage.removeItem('CART');
     window.location.replace('..');
 });

@@ -1,0 +1,20 @@
+#product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 20px;
+}
+
+button {
+    width: fit-content;
+    border-radius: 20px;
+    font-style: italic;
+    font-family: 'Signika', sans-serif;
+    font-size: smaller;
+    background-color: rgba(161, 138, 157, 0.39);
+    color:rgba(126, 116, 124, 0.974);
+}
+
+#linkback {
+    font-style: italic;
+}

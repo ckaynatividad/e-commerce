@@ -48,12 +48,12 @@ import { products } from './data/products.js';
 
 export function getProducts(){
 
-    let lsProducts = localStorage.getItem('PRODS');
+    let lsProducts = localStorage.getItem('PRODUCTS');
     const prods = JSON.parse(lsProducts);
 
     if (!prods){
         const prodString = JSON.stringify(products);
-        localStorage.setItem('PRODS', prodString);
+        localStorage.setItem('PRODUCTS', prodString);
     }
     return prods || products;
 }
@@ -64,5 +64,16 @@ export function addProduct(newProd){
     products.push(newProd);
 
     let prodString = JSON.stringify(products);
-    localStorage.setItem('PRODS', prodString);
+    localStorage.setItem('PRODUCTS', prodString);
+}
+
+export function removeProduct(newProd){
+    let products = getProducts();
+    let product = findById(newProd, products);
+    const productIndex = products.indexOf(product);
+
+    products.splice(productIndex, 1);
+
+    let prodString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', prodString);
 }

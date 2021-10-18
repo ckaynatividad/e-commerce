@@ -14,4 +14,5 @@ form.addEventListener('submit', (e) =>{
     console.log(newProd);
     addProduct(newProd);
     alert('New product added.');
+    window.location.reload();
 });

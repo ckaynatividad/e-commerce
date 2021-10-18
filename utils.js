@@ -43,3 +43,26 @@ export function addItem(id){
     const stringCart = JSON.stringify(cart);
     localStorage.setItem('CART', stringCart);
 }
+
+import { products } from './data/products.js';
+
+export function getProducts(){
+
+    let lsProducts = localStorage.getItem('PRODS');
+    const prods = JSON.parse(lsProducts);
+
+    if (!prods){
+        const prodString = JSON.stringify(products);
+        localStorage.setItem('PRODS', prodString);
+    }
+    return prods || products;
+}
+
+export function addProduct(newProd){
+    let products = getProducts();
+
+    products.push(newProd);
+
+    let prodString = JSON.stringify(products);
+    localStorage.setItem('PRODS', prodString);
+}

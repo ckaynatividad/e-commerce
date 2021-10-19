@@ -3,7 +3,7 @@
 
 import { renderProd } from '../render.js';
 import { products } from '../data/products.js';
-import { findById, addItem, getCart } from '../utils.js';
+import { findById, addItem, getCart, getProducts, addProduct } from '../utils.js';
 // import { renderLineItem } from '../render-line-items.js';
 
 const test = QUnit.test;
@@ -134,4 +134,18 @@ test('addItem should add item', (expect) =>{
     const cart = getCart();
 
     expect.deepEqual(cart, expected);
+});
+
+test('addProduct should add to array', (expect)=>{
+    let products = getProducts();
+    const newProduct = {
+        id: 'strawberry',
+        name: 'strawberry',
+        img: './assets/giphy.gif',
+        price: 1.11
+    };
+    addProduct(newProduct);
+
+    products = getProducts();
+    expect.equal(products.length, 6);
 });

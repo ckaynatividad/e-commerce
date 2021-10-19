@@ -1,9 +1,9 @@
-import { products } from '../data/products.js';
-import { orderTotalFx, findById, getCart, toUSD } from '../utils.js';
+
+import { orderTotalFx, findById, getCart, toUSD, getProducts } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
 
 const cart = getCart();
-
+const products = getProducts();
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){

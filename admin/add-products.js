@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) =>{
         img: data.get('img'),
         price: Number(data.get('price'))
     };
-    console.log(newProd);
+    //console.log(newProd);
     addProduct(newProd);
     alert('New product added.');
     window.location.reload();

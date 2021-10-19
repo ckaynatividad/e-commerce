@@ -148,4 +148,4 @@ test('addProduct should add to array', (expect)=>{
 
     products = getProducts();
     expect.equal(products.length, 6);
-})
+});
